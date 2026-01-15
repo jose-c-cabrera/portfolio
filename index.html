@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Carlos Cabrera | Programmer Analyst & Economist</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'JetBrains Mono', monospace; }
+        h1, h2, h3, .font-heading { font-family: 'Space Grotesk', sans-serif; }
+
+        .grid-bg {
+            background-image: radial-gradient(#fbbf24 0.5px, transparent 0.5px);
+            background-size: 30px 30px;
+            background-color: #0c0c0e;
+            opacity: 0.1;
+        }
+
+        .spotlight {
+            background: radial-gradient(800px at var(--x) var(--y), rgba(251, 191, 36, 0.07), transparent 80%);
+        }
+
+        .bracket { opacity: 0; transform: translateX(-10px); transition: all 0.3s ease; }
+        .nav-link:hover .bracket, .nav-link.active .bracket { opacity: 1; transform: translateX(0); }
+        .nav-link.active span:nth-child(2) { color: #fbbf24; }
+    </style>
+</head>
+
+<body class="bg-[#0c0c0e] leading-relaxed text-zinc-400 antialiased selection:bg-amber-200 selection:text-amber-900">
+    
+    <div class="fixed inset-0 grid-bg pointer-events-none"></div>
+    <div id="spotlight" class="pointer-events-none fixed inset-0 z-30 spotlight"></div>
+
+    <div class="relative z-40 mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
+        <div class="lg:flex lg:justify-between lg:gap-4">
+            
+            <header class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
+                <div>
+                    <h1 class="text-5xl font-bold tracking-tighter text-zinc-100 sm:text-6xl uppercase">Jose Cabrera</h1>
+                    <h2 class="mt-3 text-lg font-medium tracking-[0.3em] text-amber-500 uppercase translate" 
+                        data-en="Programmer Analyst // Economist" 
+                        data-fr="Analyste Programmeur // Économiste">
+                        Programmer Analyst // Economist
+                    </h2>
+                    <p class="mt-4 max-w-xs text-[10px] uppercase tracking-widest leading-relaxed text-zinc-500">
+                        <span class="translate" data-en="> Based in Montreal, QC" data-fr="> Basé à Montréal, QC">> Based in Montreal, QC</span> <br>
+                        <span class="translate" data-en="> Evidence-based development" data-fr="> Développement fondé sur des preuves">> Evidence-based development</span>
+                    </p>
+
+                    <nav class="nav hidden lg:block" aria-label="In-page jump links">
+                        <ul class="mt-16 w-max">
+                            <li>
+                                <a class="group nav-link flex items-center py-3" href="#about">
+                                    <span class="bracket mr-2 text-amber-500 font-bold">[</span>
+                                    <span class="text-xs font-bold uppercase tracking-widest text-zinc-500 group-hover:text-amber-400 transition-colors translate" data-en="About" data-fr="À Propos">About</span>
+                                    <span class="bracket ml-2 text-amber-500 font-bold">]</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="group nav-link flex items-center py-3" href="#experience">
+                                    <span class="bracket mr-2 text-amber-500 font-bold">[</span>
+                                    <span class="text-xs font-bold uppercase tracking-widest text-zinc-500 group-hover:text-amber-400 transition-colors translate" data-en="Experience" data-fr="Expérience">Experience</span>
+                                    <span class="bracket ml-2 text-amber-500 font-bold">]</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="group nav-link flex items-center py-3" href="#projects">
+                                    <span class="bracket mr-2 text-amber-500 font-bold">[</span>
+                                    <span class="text-xs font-bold uppercase tracking-widest text-zinc-500 group-hover:text-amber-400 transition-colors translate" data-en="Projects" data-fr="Projets">Projects</span>
+                                    <span class="bracket ml-2 text-amber-500 font-bold">]</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="flex flex-col gap-6 mt-8 lg:mt-0">
+                    <button id="lang-toggle" class="w-fit text-amber-500 hover:text-amber-400 transition-colors text-[10px] font-bold uppercase tracking-widest border border-amber-500/20 px-3 py-1 rounded">
+                        [ EN ]
+                    </button>
+
+                    <ul class="flex items-center gap-6">
+                        <li><a class="text-zinc-500 hover:text-amber-400 transition-colors text-[10px] font-bold uppercase tracking-widest" href="https://github.com/jose-c-cabrera" target="_blank">GitHub</a></li>
+                        <li><a class="text-zinc-500 hover:text-amber-400 transition-colors text-[10px] font-bold uppercase tracking-widest" href="https://www.linkedin.com/in/josé-cabrera-619965249/" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <main class="pt-24 lg:w-1/2 lg:py-24 pb-32">
+                
+                <section id="about" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36">
+                    <div class="translate" 
+                        data-en='<p class="text-lg text-zinc-400 leading-relaxed first-letter:text-6xl first-letter:font-heading first-letter:font-bold first-letter:text-amber-500 first-letter:mr-3 first-letter:float-left first-letter:leading-none">I began my career at the Central Bank of Honduras, where I spent my days analyzing macroeconomic trends for a $7B international reserve portfolio. While my tools then were bulletins and risk reviews, I became fascinated by the "engine" behind the data.</p>' 
+                        data-fr='<p class="text-lg text-zinc-400 leading-relaxed first-letter:text-6xl first-letter:font-heading first-letter:font-bold first-letter:text-amber-500 first-letter:mr-3 first-letter:float-left first-letter:leading-none">J&apos;ai commencé ma carrière à la Banque centrale du Honduras, où je passais mes journées à analyser les tendances macroéconomiques pour un portefeuille de réserves internationales de 7 milliards de dollars. Alors que mes outils étaient alors des bulletins et des examens de risques, je suis devenu fasciné par le « moteur » derrière les données.</p>'>
+                        <p class="text-lg text-zinc-400 leading-relaxed first-letter:text-6xl first-letter:font-heading first-letter:font-bold first-letter:text-amber-500 first-letter:mr-3 first-letter:float-left first-letter:leading-none">
+                            I began my career at the Central Bank of Honduras, where I spent my days analyzing macroeconomic trends for a $7B international reserve portfolio. While my tools then were bulletins and risk reviews, I became fascinated by the "engine" behind the data.
+                        </p>
+                    </div>
+                    
+                    <p class="mt-4 text-zinc-400 leading-relaxed translate" 
+                       data-en="This curiosity led me to a career pivot into Software Engineering. Today, I am a Programmer Analyst student at LaSalle College, translating the high-stakes precision of the banking world into robust, clean, and scalable code."
+                       data-fr="Cette curiosité m'a conduit vers un changement de carrière en génie logiciel. Aujourd'hui, je suis étudiant analyste-programmeur au Collège LaSalle, traduisant la précision de haut niveau du monde bancaire en un code robuste, propre et évolutif.">
+                        This curiosity led me to a career pivot into Software Engineering. Today, I am a Programmer Analyst student at LaSalle College, translating the high-stakes precision of the banking world into robust, clean, and scalable code. 
+                    </p>
+
+                    <p class="mt-4 text-zinc-400 leading-relaxed translate"
+                       data-en="I don't just build applications; I architect solutions rooted in evidence-based logic. Whether I’m optimizing a logistics simulator in Java or integrating AI into a bilingual glossary, my goal is to create software that is as reliable as the financial systems I once analyzed."
+                       data-fr="Je ne me contente pas de créer des applications ; j'architecture des solutions ancrées dans une logique fondée sur des preuves. Qu'il s'agisse d'optimiser un simulateur logistique en Java ou d'intégrer l'IA dans un glossaire bilingue, mon objectif est de créer des logiciels aussi fiables que les systèmes financiers que j'analysais autrefois.">
+                        I don't just build applications; I architect solutions rooted in evidence-based logic. Whether I’m optimizing a logistics simulator in Java or integrating AI into a bilingual glossary, my goal is to create software that is as reliable as the financial systems I once analyzed. 
+                    </p>
+
+                    <div class="mt-6 flex flex-wrap gap-4 text-[10px] uppercase tracking-[0.2em] text-amber-500/60 font-bold">
+                        <span class="translate" data-en="// Trilingual (FR/EN/ES)" data-fr="// Trilingue (FR/EN/ES)">// Trilingual (FR/EN/ES)</span>
+                        <span class="translate" data-en="// Data-Driven Thinker" data-fr="// Penseur Axé Données">// Data-Driven Thinker</span>
+                        <span class="translate" data-en="// Runner" data-fr="// Coureur">// Runner</span>
+                    </div>
+                </section>
+
+                <section id="experience" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36">
+                    <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-[#0c0c0e]/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only">
+                        <h2 class="text-sm font-bold uppercase tracking-widest text-zinc-200 translate" data-en="Experience" data-fr="Expérience">Experience</h2>
+                    </div>
+
+                    <div class="group/list space-y-8">
+                        <div class="group relative p-6 rounded-xl border border-transparent transition-all lg:hover:border-amber-500/10 lg:hover:bg-amber-500/5">
+                            <div class="grid gap-4 sm:grid-cols-8">
+                                <header class="text-[10px] font-bold text-zinc-600 uppercase tracking-widest sm:col-span-2">2023 — 2024</header>
+                                <div class="sm:col-span-6">
+                                    <h3 class="text-lg font-bold text-zinc-100 group-hover:text-amber-400 transition-colors translate" data-en="Junior Financial Analyst · Central Bank of Honduras" data-fr="Analyste Financier Junior · Banque Centrale du Honduras">Junior Financial Analyst · Central Bank of Honduras</h3>
+                                    <p class="mt-2 text-xs text-zinc-500 leading-relaxed translate" data-en="Produced macroeconomic bulletins for a USD $7B portfolio. Built visualization tools to track risk for 10+ counterparties." data-fr="Production de bulletins macroéconomiques pour un portefeuille de 7 G$ USD. Création d'outils de visualisation des risques pour plus de 10 contreparties.">Produced macroeconomic bulletins for a USD $7B portfolio. Built visualization tools to track risk for 10+ counterparties.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group relative p-6 rounded-xl border border-transparent transition-all lg:hover:border-amber-500/10 lg:hover:bg-amber-500/5">
+                            <div class="grid gap-4 sm:grid-cols-8">
+                                <header class="text-[10px] font-bold text-zinc-600 uppercase tracking-widest sm:col-span-2">2023</header>
+                                <div class="sm:col-span-6">
+                                    <h3 class="text-lg font-bold text-zinc-100 group-hover:text-amber-400 transition-colors translate" data-en="Procurement Liaison · Creative CARI-USAID" data-fr="Liaison aux Achats · Creative CARI-USAID">Procurement Liaison · Creative CARI-USAID</h3>
+                                    <p class="mt-2 text-xs text-zinc-500 leading-relaxed translate" data-en="Managed USD $50,000 in expenses and vendor negotiations with strict fiscal compliance." data-fr="Gestion de 50 000 USD de dépenses et négociations avec les fournisseurs avec une conformité fiscale stricte.">Managed USD $50,000 in expenses and vendor negotiations with strict fiscal compliance.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group relative p-6 rounded-xl border border-transparent transition-all lg:hover:border-amber-500/10 lg:hover:bg-amber-500/5">
+                            <div class="grid gap-4 sm:grid-cols-8">
+                                <header class="text-[10px] font-bold text-zinc-600 uppercase tracking-widest sm:col-span-2">2022 — 2023</header>
+                                <div class="sm:col-span-6">
+                                    <h3 class="text-lg font-bold text-zinc-100 group-hover:text-amber-400 transition-colors translate" data-en="Financial Operations Intern · CABEI" data-fr="Stagiaire aux Opérations Financières · CABEI">Financial Operations Intern · CABEI</h3>
+                                    <p class="mt-2 text-xs text-zinc-500 leading-relaxed translate" data-en="Validated SWIFT messages and assisted in investment authorization workflows." data-fr="Validation des messages SWIFT et assistance dans les flux d'autorisation d'investissement.">Validated SWIFT messages and assisted in investment authorization workflows.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-8 px-6">
+                            <a class="inline-flex items-center font-bold text-amber-500 hover:text-amber-400 transition-all group tracking-widest text-[10px] uppercase" href="CV_Jose_Cabrera.pdf" target="_blank">
+                                <span class="translate" data-en="View Full Résumé" data-fr="Voir le CV Complet">View Full Résumé</span>
+                                <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="projects" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36">
+                    <div
+                        class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-[#0c0c0e]/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only">
+                        <h2 class="text-sm font-bold uppercase tracking-widest text-zinc-200">Projects</h2>
+                    </div>
+                
+                    <div class="group/list space-y-10">
+                
+                        <div
+                            class="group relative p-6 rounded-xl border border-transparent transition-all lg:hover:border-amber-500/10 lg:hover:bg-amber-500/5 lg:group-hover/list:opacity-50 lg:hover:!opacity-100">
+                            <div class="grid gap-4 sm:grid-cols-8">
+                                <header class="text-[10px] font-bold text-amber-500/40 uppercase tracking-[0.2em] sm:col-span-2">Java</header>
+                                <div class="sm:col-span-6">
+                                    <h3 class="text-xl font-bold text-zinc-100 group-hover:text-amber-400 transition-colors">
+                                        <a href="https://github.com/anasofiarod/SmartLogisticsSimulator" target="_blank"
+                                            rel="noreferrer" class="inline-flex items-baseline group/link">
+                                            Smart Logistics Simulator
+                                            <span
+                                                class="ml-2 text-[9px] text-zinc-600 uppercase tracking-widest font-mono group-hover:text-amber-500/50 transition-colors">[Code]</span>
+                                            <span
+                                                class="inline-block ml-2 text-xs transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1">↗</span>
+                                        </a>
+                                    </h3>
+                                    <p class="mt-2 text-sm text-zinc-500 leading-relaxed">
+                                        Architected a simulation engine using OOP principles. Engineered custom Merge/Quick Sort
+                                        algorithms to optimize order scheduling based on capacity and deadlines.
+                                    </p>
+                                    <div class="mt-4 flex flex-wrap gap-2">
+                                        <span
+                                            class="px-2 py-1 text-[9px] font-bold uppercase tracking-wider text-amber-400/70 border border-amber-400/20 rounded">Java</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div
+                            class="group relative p-6 rounded-xl border border-transparent transition-all lg:hover:border-amber-500/10 lg:hover:bg-amber-500/5 lg:group-hover/list:opacity-50 lg:hover:!opacity-100">
+                            <div class="grid gap-4 sm:grid-cols-8">
+                                <header class="text-[10px] font-bold text-amber-500/40 uppercase tracking-[0.2em] sm:col-span-2">C#</header>
+                                <div class="sm:col-span-6">
+                                    <h3 class="text-xl font-bold text-zinc-100 group-hover:text-amber-400 transition-colors">
+                                        <a href="https://github.com/jose-c-cabrera/HiTech-Management-System" target="_blank"
+                                            rel="noreferrer" class="inline-flex items-baseline group/link">
+                                            Hi-Tech Order Management
+                                            <span
+                                                class="ml-2 text-[9px] text-zinc-600 uppercase tracking-widest font-mono group-hover:text-amber-500/50 transition-colors">[Code]</span>
+                                            <span
+                                                class="inline-block ml-2 text-xs transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1">↗</span>
+                                        </a>
+                                    </h3>
+                                    <p class="mt-2 text-sm text-zinc-500 leading-relaxed">
+                                        Architected a multi-tier Windows Form application. Implemented ADO.NET and Entity Framework for
+                                        secure data access and automated business workflows.
+                                    </p>
+                                    <div class="mt-4 flex flex-wrap gap-2">
+                                        <span
+                                            class="px-2 py-1 text-[9px] font-bold uppercase tracking-wider text-amber-400/70 border border-amber-400/20 rounded">C#</span>
+                                        <span
+                                            class="px-2 py-1 text-[9px] font-bold uppercase tracking-wider text-amber-400/70 border border-amber-400/20 rounded">SQL
+                                            Server</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div
+                            class="group relative p-6 rounded-xl border border-transparent transition-all lg:hover:border-amber-500/10 lg:hover:bg-amber-500/5 lg:group-hover/list:opacity-50 lg:hover:!opacity-100">
+                            <div class="grid gap-4 sm:grid-cols-8">
+                                <header class="text-[10px] font-bold text-amber-500/40 uppercase tracking-[0.2em] sm:col-span-2">PHP /
+                                    AI</header>
+                                <div class="sm:col-span-6">
+                                    <h3 class="text-xl font-bold text-zinc-100 group-hover:text-amber-400 transition-colors">
+                                        <a href="https://glossaire.infinityfree.me/" target="_blank" rel="noreferrer"
+                                            class="inline-flex items-baseline group/link">
+                                            Bilingual IT Glossary & AI
+                                            <span
+                                                class="ml-2 text-[9px] text-zinc-600 uppercase tracking-widest font-mono group-hover:text-amber-500/50 transition-colors">[Live
+                                                App]</span>
+                                            <span
+                                                class="inline-block ml-2 text-xs transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1">↗</span>
+                                        </a>
+                                    </h3>
+                                    <p class="mt-2 text-sm text-zinc-500 leading-relaxed">
+                                        Integrated OpenAI API to dynamically generate technical definitions for students in Quebec.
+                                        Engineered a robust PHP/MySQL backend for term management and caching.
+                                    </p>
+                                    <div class="mt-4 flex flex-wrap gap-2">
+                                        <span
+                                            class="px-2 py-1 text-[9px] font-bold uppercase tracking-wider text-amber-400/70 border border-amber-400/20 rounded">PHP</span>
+                                        <span
+                                            class="px-2 py-1 text-[9px] font-bold uppercase tracking-wider text-amber-400/70 border border-amber-400/20 rounded">OpenAI
+                                            API</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div
+                            class="group relative p-6 rounded-xl border border-transparent transition-all lg:hover:border-amber-500/10 lg:hover:bg-amber-500/5 lg:group-hover/list:opacity-50 lg:hover:!opacity-100">
+                            <div class="grid gap-4 sm:grid-cols-8">
+                                <header class="text-[10px] font-bold text-amber-500/40 uppercase tracking-[0.2em] sm:col-span-2">Python
+                                    / Data</header>
+                                <div class="sm:col-span-6">
+                                    <h3 class="text-xl font-bold text-zinc-100 group-hover:text-amber-400 transition-colors">
+                                        <a href="https://github.com/jose-c-cabrera/investment-tracker" target="_blank" rel="noreferrer"
+                                            class="inline-flex items-baseline group/link">
+                                            Investment Portfolio Tracker
+                                            <span
+                                                class="ml-2 text-[9px] text-zinc-600 uppercase tracking-widest font-mono group-hover:text-amber-500/50 transition-colors">[Code]</span>
+                                            <span
+                                                class="inline-block ml-2 text-xs transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1">↗</span>
+                                        </a>
+                                    </h3>
+                                    <p class="mt-2 text-sm text-zinc-500 leading-relaxed">
+                                        A personal tool for tracking asset performance and history, reflecting an evidence-based
+                                        approach to financial data management and software persistence.
+                                    </p>
+                                    <div class="mt-4 flex flex-wrap gap-2">
+                                        <span
+                                            class="px-2 py-1 text-[9px] font-bold uppercase tracking-wider text-amber-400/70 border border-amber-400/20 rounded">Python</span>
+                                        <span
+                                            class="px-2 py-1 text-[9px] font-bold uppercase tracking-wider text-amber-400/70 border border-amber-400/20 rounded">JSON</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div
+                        class="group relative p-6 rounded-xl border border-transparent transition-all lg:hover:border-amber-500/10 lg:hover:bg-amber-500/5 lg:group-hover/list:opacity-50 lg:hover:!opacity-100">
+                        <div class="grid gap-4 sm:grid-cols-8">
+                            <header class="text-[10px] font-bold text-amber-500/40 uppercase tracking-[0.2em] sm:col-span-2">Python CLI
+                            </header>
+                            <div class="sm:col-span-6">
+                                <h3 class="text-xl font-bold text-zinc-100 group-hover:text-amber-400 transition-colors">
+                                    <a href="https://youtu.be/0WUQw9rj7_s" target="_blank" rel="noreferrer"
+                                        class="inline-flex items-baseline group/link">
+                                        Flashcards Spaced Repetition
+                                        <span
+                                            class="ml-2 text-[9px] text-zinc-600 uppercase tracking-widest font-mono group-hover:text-amber-500/50 transition-colors">[Video
+                                            Demo]</span>
+                                        <span
+                                            class="inline-block ml-2 text-xs transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1">↗</span>
+                                    </a>
+                                </h3>
+                                <p class="mt-2 text-sm text-zinc-500 leading-relaxed">
+                                    Terminal-based learning tool for Harvard's CS50P. Features JSON-based persistence and a custom
+                                    scheduling algorithm to optimize long-term knowledge retention.
+                                </p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span
+                                        class="px-2 py-1 text-[9px] font-bold uppercase tracking-wider text-amber-400/70 border border-amber-400/20 rounded">Python</span>
+                                    <span
+                                        class="px-2 py-1 text-[9px] font-bold uppercase tracking-wider text-amber-400/70 border border-amber-400/20 rounded">JSON</span>
+                                    <span
+                                        class="px-2 py-1 text-[9px] font-bold uppercase tracking-wider text-amber-400/70 border border-amber-400/20 rounded">Pytest</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <footer class="pt-16 text-[10px] text-zinc-600 uppercase tracking-[0.3em]">
+                    Jose Carlos Cabrera // 2026 <br>
+                <span class="mt-2 block lowercase opacity-50">Design inspired by <a href="https://brittanychiang.com" class="underline hover:text-amber-500">Brittany Chiang</a></span>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Language Toggle Logic
+        const langToggle = document.getElementById('lang-toggle');
+        const translatableElements = document.querySelectorAll('.translate');
+        let currentLang = localStorage.getItem('lang') || 'en';
+
+        const updateLanguage = (lang) => {
+            translatableElements.forEach(el => {
+                const text = el.getAttribute(`data-${lang}`);
+                el.innerHTML = text;
+            });
+            langToggle.textContent = `[ ${lang.toUpperCase()} ]`;
+            document.documentElement.lang = lang;
+            localStorage.setItem('lang', lang);
+        };
+
+        langToggle.addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'fr' : 'en';
+            updateLanguage(currentLang);
+        });
+
+        updateLanguage(currentLang);
+
+        // Spotlight Effect
+        const spotlight = document.getElementById('spotlight');
+        window.addEventListener('mousemove', e => {
+            spotlight.style.setProperty('--x', `${e.clientX}px`);
+            spotlight.style.setProperty('--y', `${e.clientY}px`);
+        });
+
+        // ScrollSpy Logic
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '-25% 0% -65% 0%',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
